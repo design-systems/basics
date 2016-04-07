@@ -1,0 +1,163 @@
+@import "mixins.less";
+@import "variables.less";
+
+@charset "utf-8";
+/* CSS Document */
+
+/**********       BASE        **********/
+
+
+html{
+  box-sizing: border-box;
+
+  a { color: @lightColor;
+    text-decoration:none; font-size: 1em;
+  }
+  a:visited { color:  @lightColor }
+  a:hover { color:  @highlight }
+  a:focus { outline: thin dotted; }
+  a:hover, a:active { outline: 0; }
+}
+
+body{
+  margin: 0;
+  background: @bgColor;
+  color: @lightColor;
+  font-family: @headline-font;
+  -webkit-overflow-scrolling: touch;
+  min-height: 3000px;
+}
+.touch{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* ===== Primary Styles ========================================================
+   Author: Nick Jones / The Experiment
+   ========================================================================== */
+
+::selection {
+  background: @lightColor;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: @headline-font;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  position: relative;
+  font-size: 5vw;
+  letter-spacing: -.025em;
+  line-height: 1;
+}
+h2{
+  font-size: 6vw;
+}
+h3{
+  font-size: 4vw;
+}
+h4{
+  font-size: 1em;
+}
+@media screen and (min-width: 1000px){
+  h1{
+    font-size: 4.5vw;
+  }
+  h2{
+    font-size: 3.2vw;
+  }
+  h3{
+    font-size: 1.6vw;
+  }
+  h4{
+    font-size: 1.1vw;
+  }
+}
+
+p{
+  font-size: 1.2em;
+  padding: 0 20% 0;
+  opacity: 0;
+  @media (max-width: 800px){
+    padding: 0% 2%;
+  }
+  .transition(1.5s,linear,opacity);
+  &.visible{
+    opacity: 1;
+  }
+}
+
+.hr{
+  width: 3vw;
+  border-bottom: 2px solid;
+  position: relative;
+}
+
+.Button{
+  position: relative;
+  display: inline-block;
+  color: #000;
+  background: #dda;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  .rounded(5px);
+  .transition(.2s,@easeOut);
+  img{
+    position: relative;
+    width: 10px;
+    top: -1px;
+    margin: 0 0px 0 2px;
+  }
+  &:hover{
+    background: #fff;
+  }
+}
+.Left{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25%;
+  img{
+    width: 100%;
+  }
+}
+.Right{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 75%;
+  img{
+    width: 100%;
+  }
+}
+.Screen{
+  position: relative;
+  min-height: 100vh;
+  padding: 5vw;
+  .Button{
+    margin-top: 3vh;
+  }
+}
+@media (max-width: 800px){
+    padding: 0% 2%;
+  }
