@@ -410,6 +410,7 @@ body {
   top: 0;
   width: 95vw;
   background: #ef4144;
+  margin-top: 64px;
 }
 .Modules .Module .Graphic img {
   width: 100%;
@@ -427,6 +428,10 @@ body {
   .Modules .Module .Graphic {
     width: 25vw;
     float: right;
+    margin-top: 0px;
+  }
+  .Modules .Module .Purpose {
+    margin-top: 32px;
   }
   .Modules .Module .Text {
     width: 25vw;
@@ -458,6 +463,7 @@ section:nth-of-type(1) .Team {
   position: relative;
   top: 3px;
   letter-spacing: 0;
+  margin-top: 0px;
 }
 @media (min-width: 1000px) {
   section {
