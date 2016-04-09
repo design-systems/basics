@@ -6,7 +6,8 @@ var moduleTops = [];
 document.addEventListener('scroll',scrollHandler);
 window.addEventListener('resize',resizeHandler);
 
-setTimeout(resizeHandler,500);
+resizeHandler();
+setTimeout(setTops,1);
 
 function scrollHandler(e) {
 	scrollTop = document.querySelector('body').scrollTop
@@ -25,9 +26,12 @@ function scrollHandler(e) {
 }
 
 function resizeHandler(e) {
+	setTops();
+}
+
+function setTops() {
 	moduleTops = []
 	for (var i = 0; i < modules.length; i++) {
 		moduleTops.push(modules[i].getBoundingClientRect().top - menuItems[menuItems.length-1].getBoundingClientRect().top + document.querySelector('body').scrollTop)
 	}
-	console.log(moduleTops)
 }
