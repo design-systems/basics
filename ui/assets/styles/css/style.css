@@ -403,7 +403,7 @@ body {
 .Modules .Module .Benefit {
   color: #271325;
 }
-.Modules .Module .Graphic {
+.Modules .Module .Graphical {
   position: relative;
   display: inline-block;
   top: 0;
@@ -411,22 +411,29 @@ body {
   background: #ef4144;
   margin-top: 64px;
 }
-.Modules .Module .Graphic img {
+.Modules .Module .Graphical img {
   width: 100%;
 }
-.Modules .Module:nth-of-type(1n) .Graphic {
+.Modules .Module:nth-of-type(1n) .Graphical {
   background: #ef4144;
 }
-.Modules .Module:nth-of-type(2n) .Graphic {
+.Modules .Module:nth-of-type(2n) .Graphical {
   background: #271325;
 }
-.Modules .Module:nth-of-type(3n) .Graphic {
+.Modules .Module:nth-of-type(3n) .Graphical {
   background: #00bab2;
 }
 @media (min-width: 1000px) {
-  .Modules .Module .Graphic {
+  .Modules {
+    width: 75vw;
+  }
+  .Modules .Module .Textual {
+    width: 50vw;
+    float: left;
+  }
+  .Modules .Module .Graphical {
     width: 25vw;
-    float: right;
+    float: left;
     margin-top: 0px;
   }
   .Modules .Module .Purpose {
@@ -580,39 +587,14 @@ section:nth-of-type(1) .Team {
     line-height: 1.45;
   }
   .Menu .Menu-item .Number {
-    color: #ef4144;
+    color: #271325;
     position: relative;
     display: inline-block;
     width: 5.0625vw;
   }
-}
-.Left {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 25%;
-  opacity: .4;
-}
-.Left img {
-  width: 100%;
-}
-.Right {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 75%;
-}
-.Right img {
-  width: 100%;
-  opacity: .4;
-}
-.Screen {
-  position: relative;
-  min-height: 100vh;
-  padding: 5vw;
-}
-.Screen .Button {
-  margin-top: 3vh;
+  .Menu .Menu-item.active .Number {
+    color: #ef4144;
+  }
 }
 @media (max-width: 800px) {
   padding: 0% 2%;

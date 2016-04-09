@@ -195,7 +195,7 @@ body{
     .Benefit{
       color: @dark;
     }
-    .Graphic{
+    .Graphical{
       position: relative;
       display: inline-block;
       top: 0;
@@ -207,24 +207,31 @@ body{
       }
     }
     &:nth-of-type(1n){
-      .Graphic{
+      .Graphical{
         background: @red;
       }
     }
     &:nth-of-type(2n){
-      .Graphic{
+      .Graphical{
         background: @dark;
       }
     }
     &:nth-of-type(3n){
-      .Graphic{
+      .Graphical{
         background: @teal;
       }
     }
-    @media (min-width: 1000px){
-      .Graphic{
+  }
+  @media (min-width: 1000px){
+    width: 75vw;
+    .Module{
+      .Textual{
+        width: 50vw;
+        float: left;
+      }
+      .Graphical{
         width: 25vw;
-        float: right;
+        float: left;
         margin-top: 0px;
       }
       .Purpose{
@@ -237,9 +244,11 @@ body{
       .Text{
         width: 30vw;
       }
+      &.active{
+        
+      }
     }
   }
-
 }
 
 .Purpose,
@@ -380,41 +389,17 @@ section{
    .Menu-item{
      line-height: 1.45;
      .Number{
-       color: @red;
+       color: @dark;
        position: relative;
        display: inline-block;
        width: 8.1 * @g;
      }
+     &.active{
+      .Number{
+        color: @red;
+      }
+     }
    } 
-  }
-}
-.Left{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 25%;
-  opacity: .4;
-  img{
-    width: 100%;
-
-  }
-}
-.Right{
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 75%;
-  img{
-    width: 100%;
-    opacity: .4;
-  }
-}
-.Screen{
-  position: relative;
-  min-height: 100vh;
-  padding: 5vw;
-  .Button{
-    margin-top: 3vh;
   }
 }
 @media (max-width: 800px){
