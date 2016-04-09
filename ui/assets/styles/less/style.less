@@ -10,18 +10,17 @@
 html{
   box-sizing: border-box;
 
-  a { color: @tan;
+  a { color: @dark;
     text-decoration:none; font-size: 1em;
   }
-  a:visited { color:  @dark }
   a:hover { color:  @red }
   a:focus { outline: thin dotted; }
-  a:hover, a:active { outline: 0; }
+  a:hover, a:active { outline: 0; color:  @red; }
 }
 
 body{
   margin: 0;
-  background: @tan;
+  background: url(../../images/bg.png);
   color: @dark;
   font-family: @headline-font;
   -webkit-overflow-scrolling: touch;
@@ -191,6 +190,7 @@ body{
       position: relative;
       color: @red;
       display: inline-block;
+      padding: 2.5vw 0;
     }
     .Benefit{
       color: @dark;
@@ -230,8 +230,12 @@ body{
       .Purpose{
         margin-top: 32px;
       }
+      .Purpose,
+      .Benefit{
+        padding: 2.5vw 5.1 * @g;
+      }
       .Text{
-        width: 25vw;
+        width: 30vw;
       }
     }
   }
@@ -240,7 +244,7 @@ body{
 
 .Purpose,
 .Benefit{
-  padding: 32px 5 * @g;
+  padding: 2.5vw 5 * @g;
   .text{
     float: left;
     position: relative;
@@ -253,6 +257,7 @@ section{
   padding: 4 * @g;
   border-right: 1px solid @borderColor;
   &:nth-of-type(1){
+    background: url(../../images/bg.png);
     .Logo{
       position: relative;
       margin-right: 4 * @g;
@@ -306,8 +311,13 @@ section{
     background: @red;
     color: @tan;
     margin-top: 16px;
-    padding: 32px 5 * @g;
+    padding: 2.5vw 5 * @g;
     display: inline-block;
+    .Text{
+      width: 65vw;
+    }
+  }
+  .Benefit{
     .Text{
       width: 65vw;
     }
@@ -328,11 +338,9 @@ section{
       }
     }
     .Purpose{
-      background: @red;
-      color: @tan;
-      margin-top: 52px;
-      height: 215px;
-      padding: 32px 5 * @g;
+      margin-top: 2vw;
+      height: auto;
+      width: 100%;
       .Text{
         width: 25vw;
         font-size: 4*@g;
@@ -344,6 +352,10 @@ section{
       left: 100%;
       bottom: 0;
       padding: 32px 4 * @g;
+      .Text{
+        width: 100%;
+        font-size: 3*@g;
+      }
       .Label{
         margin-bottom: 8px;
         width: 100%;
@@ -364,9 +376,9 @@ section{
     }
   }
   @media screen and (min-width: 1000px) {
-    margin-top: 120px;
+    margin-top: 7.2vw;
    .Menu-item{
-     line-height: 48px;
+     line-height: 1.45;
      .Number{
        color: @red;
        position: relative;

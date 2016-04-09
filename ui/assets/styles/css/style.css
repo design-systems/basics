@@ -196,12 +196,9 @@ html {
   box-sizing: border-box;
 }
 html a {
-  color: #fff0ba;
+  color: #271325;
   text-decoration: none;
   font-size: 1em;
-}
-html a:visited {
-  color: #271325;
 }
 html a:hover {
   color: #ef4144;
@@ -212,10 +209,11 @@ html a:focus {
 html a:hover,
 html a:active {
   outline: 0;
+  color: #ef4144;
 }
 body {
   margin: 0;
-  background: #fff0ba;
+  background: url(../../images/bg.png);
   color: #271325;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-overflow-scrolling: touch;
@@ -400,6 +398,7 @@ body {
   position: relative;
   color: #ef4144;
   display: inline-block;
+  padding: 2.5vw 0;
 }
 .Modules .Module .Benefit {
   color: #271325;
@@ -433,13 +432,17 @@ body {
   .Modules .Module .Purpose {
     margin-top: 32px;
   }
+  .Modules .Module .Purpose,
+  .Modules .Module .Benefit {
+    padding: 2.5vw 3.1875vw;
+  }
   .Modules .Module .Text {
-    width: 25vw;
+    width: 30vw;
   }
 }
 .Purpose,
 .Benefit {
-  padding: 32px 3.125vw;
+  padding: 2.5vw 3.125vw;
 }
 .Purpose .text,
 .Benefit .text {
@@ -451,6 +454,9 @@ section {
   width: 100%;
   padding: 2.5vw;
   border-right: 1px solid #fedfab;
+}
+section:nth-of-type(1) {
+  background: url(../../images/bg.png);
 }
 section:nth-of-type(1) .Logo {
   position: relative;
@@ -505,10 +511,13 @@ section:nth-of-type(1) .Team {
   background: #ef4144;
   color: #fff0ba;
   margin-top: 16px;
-  padding: 32px 3.125vw;
+  padding: 2.5vw 3.125vw;
   display: inline-block;
 }
 .Header .Purpose .Text {
+  width: 65vw;
+}
+.Header .Benefit .Text {
   width: 65vw;
 }
 @media screen and (min-width: 1000px) {
@@ -529,11 +538,9 @@ section:nth-of-type(1) .Team {
     left: -0.41vw;
   }
   .Header .Purpose {
-    background: #ef4144;
-    color: #fff0ba;
-    margin-top: 52px;
-    height: 215px;
-    padding: 32px 3.125vw;
+    margin-top: 2vw;
+    height: auto;
+    width: 100%;
   }
   .Header .Purpose .Text {
     width: 25vw;
@@ -545,6 +552,10 @@ section:nth-of-type(1) .Team {
     left: 100%;
     bottom: 0;
     padding: 32px 2.5vw;
+  }
+  .Header .Benefit .Text {
+    width: 100%;
+    font-size: 1.875vw;
   }
   .Header .Benefit .Label {
     margin-bottom: 8px;
@@ -563,10 +574,10 @@ section:nth-of-type(1) .Team {
 }
 @media screen and (min-width: 1000px) {
   .Menu {
-    margin-top: 120px;
+    margin-top: 7.2vw;
   }
   .Menu .Menu-item {
-    line-height: 48px;
+    line-height: 1.45;
   }
   .Menu .Menu-item .Number {
     color: #ef4144;
