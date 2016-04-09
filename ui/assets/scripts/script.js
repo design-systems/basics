@@ -5,7 +5,8 @@ var moduleTops = [];
 
 document.addEventListener('scroll',scrollHandler);
 window.addEventListener('resize',resizeHandler);
-resizeHandler();
+
+setTimeout(resizeHandler,500);
 
 function scrollHandler(e) {
 	scrollTop = document.querySelector('body').scrollTop
