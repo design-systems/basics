@@ -1,3 +1,4 @@
 node_modules
 _working
 .DS_Store
+.gitignore
