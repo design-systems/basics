@@ -411,7 +411,6 @@ body {
   display: inline-block;
   top: 0;
   width: 100%;
-  background: #ef4144;
   margin-top: 24px;
   margin-bottom: 64px;
 }
@@ -439,7 +438,7 @@ body {
     width: 25vw;
     float: left;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: -1px;
   }
   .Modules .Module .Title {
     display: inline-block;
@@ -608,10 +607,10 @@ section:nth-of-type(1) .Team {
 }
 @media screen and (min-width: 1000px) {
   .Menu {
-    margin-top: 7.2vw;
+    margin-top: 6.9vw;
   }
   .Menu .Menu-item {
-    line-height: 1.45;
+    line-height: 1.642;
   }
   .Menu .Menu-item .Number {
     color: #271325;
